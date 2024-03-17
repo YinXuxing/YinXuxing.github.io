@@ -1,0 +1,65 @@
+<html>
+  <body>
+    <div style="width:300px;margin:auto;"> <h1>Welcome to <b>Chinsan.ORG</b> Chinsan的线上导航页</h1></div>
+    <div style="width:300px;margin:auto;"> <h2>本页面由<b>ChinsanVan.github.io</b>提供静态页面服务</h2></div>
+    
+    <div style="width:300px;margin:auto;"><h3>Click botton 点击即达</h3></div>
+    <div style="width:300px;margin:auto;"><a href="https://github.com/ChinsanVan/ChinsanVan.github.io/tree/main/Codebase">My Codebase on gihub 代码数据库</a></div>
+    <br> 
+    <div style="width:300px;margin:auto;"><a href="https://chinsan.zcool.com.cn">My Zcool 站酷设计站</a></div>
+    <br> 
+    <div style="width:300px;margin:auto;"><a href="https://chintechsan.blogspot.com/">My Blog (ChinTechSan) 我的博客</a></div>
+    
+    <div style="width:300px;margin:auto;"><h3>Contact me</h3></div>
+    <div style="width:300px;margin:auto;"><p>My Email</p></div>
+    <div style="width:300px;margin:auto;"><p>chinsanvan@gmail.com</p></div>
+
+    <div style="width:300px;margin:auto;"><h3>Freedom</h3></div>
+    <div style="width:300px;margin:auto;"><p>©Chinsan 2024 Ningpo,Great China</p></div>
+  </body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ChinsanVan</title>
+<style>
+#clock{
+    margin:100px auto;
+    border: 5px double green;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font: bold;
+    color: red;
+}
+</style>
+<script>
+function showTime(clock){
+    var now = new Date();
+    var year = now.getFullYear()-1911;
+    var month= now.getMonth();
+    var day = now.getDate();
+    var hour = now.getHours();
+    var minu = now.getMinutes();
+    var second = now.getSeconds();
+    month = month+1;
+    var arr_work = new Array("Sun","Mon","Tue","Wed","Thur","Fri","Sat");
+    var week = arr_work[ now.getDay()];
+    var time = month+"/"+day+"/"+ year +" "+ week+" "+hour+":"+minu+":"+second;
+    clock.innerHTML=time;
+}
+window.onload = function(){
+    var clock = document.getElementById("clock");
+    window.setInterval("showTime(clock)",1000);
+  
+}
+</script>
+</head>
+<body>
+<div id ="clock"></div>
+</body>
+</html>
